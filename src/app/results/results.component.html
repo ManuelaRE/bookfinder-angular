@@ -1,0 +1,10 @@
+<section>
+    <div *ngFor="let item of searchResult" class="card">
+        <img src={{item.volumeInfo.imageLinks.thumbnail}} alt="book">
+        <h3>{{item.volumeInfo.title}}</h3>
+        <p>By: {{item.volumeInfo.authors}} </p>
+        <button (click)="handleSave(item)">Add to Favourites</button>
+    </div>
+</section>
+
+

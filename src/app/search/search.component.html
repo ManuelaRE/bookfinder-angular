@@ -1,0 +1,14 @@
+<div class="main_page">
+    <img src="assets/svg/logo.svg" />
+    <div class="wrap">
+        <div class="search">
+            <input [(ngModel)]="searchText" class="search-txt" type="text" placeholder="Search by author.."/>
+            <button (click)="handleSearch()" class="search-btn">Search</button>
+            <button (click)="toggle()" class="search-btn btn-fav">Favourites</button>
+        </div>
+    </div>
+    
+    <app-results [searchResult]="searchResult" *ngIf='isViewable'></app-results>
+    <app-collection [favBooks]='favBooks' *ngIf='!isViewable'></app-collection>
+</div>
+

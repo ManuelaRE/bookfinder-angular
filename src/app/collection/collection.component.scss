@@ -1,0 +1,54 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4%;
+
+    .card {
+        // border: 2px solid goldenrod;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        padding: 1%;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+
+        &:hover {
+            background-color: lighten($color: #FFD7CB, $amount: 5%);
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        h3, p {
+            text-align: center;
+            padding: 2% 0;
+        }
+    }
+
+    button {
+        width: 130px;
+        height: 30px;
+        border: 1px solid #D36582;
+        background: #D36582;
+        text-align: center;
+        color: #3F3D56;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+
+        &:hover {
+            background-color: darken($color: #D36582, $amount: 5%);
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    section {
+        margin-top: 25%;
+    }
+}
