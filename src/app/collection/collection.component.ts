@@ -15,8 +15,17 @@ export class CollectionComponent implements OnInit {
   constructor(private firestore: AngularFirestore, private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getFavourites();
+  }
+
+  getFavourites() {
     this.firestore.collection(`collection`).get().toPromise().then(response => {
       this.favBooks = response.docs.map(d => d.data())
     })
   }
+  handleDelete(item) {
+    this.firestore.doc(`collection/${item.id}`).delete();
+    this.getFavourites();
+  }
+
 }

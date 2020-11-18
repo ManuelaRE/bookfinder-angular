@@ -30,7 +30,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.handleInitialDisplay();
     this.isViewable = true; 
-
   }
 
 

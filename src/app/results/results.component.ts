@@ -24,14 +24,9 @@ export class ResultsComponent implements OnInit {
     
   }
 
-  handleChange(event) {
-    event.target.value;
-    this.searchResult.saleInfo.isEbook = this.searchResult.saleInfo.isEbook.filter(true);
-  }
-
-
   handleSave(item) {
     this.firestore.doc(`collection/${item.id}`).set(item, { merge: true });
+    alert("Item added to favourites")
   }
 
 
